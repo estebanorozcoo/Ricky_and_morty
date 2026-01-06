@@ -21,6 +21,7 @@ export default function DashboardPage() {
   const [filteredCharacters, setFilteredCharacters] = useState<Character[]>([]);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
+  const [speciesFilter, setSpeciesFilter] = useState<string>('all');
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState<Stats>({
@@ -120,8 +121,10 @@ export default function DashboardPage() {
       <FiltersPanel
         search={search}
         status={statusFilter}
+        species={speciesFilter}
         onSearchChange={setSearch}
         onStatusChange={setStatusFilter}
+        onSpeciesChange={setSpeciesFilter}
       />
 
       {/* Contador de resultados visibles */}
