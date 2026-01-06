@@ -1,8 +1,5 @@
-interface StatsCardProps {
-  title: string;
-  value: number;
-  variant?: 'success' | 'danger' | 'warning' | 'default';
-}
+import { StatsCardProps } from '@/types/components';
+
 
 export default function StatsCard({
   title,

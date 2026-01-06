@@ -1,3 +1,8 @@
+/**
+ * PÁGINA DE DEMOSTRACIÓN - SIN FUNCIONALIDAD REAL
+ * Esta página muestra un formulario de login con validación básica,
+ * pero NO implementa autenticación real ni hace llamadas a una API.
+ * Los datos solo se imprimen en la consola del navegador.
 'use client';
 
 import { useState } from 'react';
@@ -72,4 +77,4 @@ export default function LoginPage() {
       </form>
     </main>
   );
-}
+} **/

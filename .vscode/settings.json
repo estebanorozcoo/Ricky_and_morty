@@ -1,0 +1,13 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "css.validate": false,
+  "scss.validate": false,
+  "postcss.validate": false,
+  "editor.formatOnSave": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    }
+  }
+}

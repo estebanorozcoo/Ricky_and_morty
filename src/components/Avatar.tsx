@@ -1,13 +1,9 @@
+import { AvatarProps } from '@/types/components';
 import React from "react";
 
-interface AvatarProps {
-  name: string;
-  imageUrl?: string;
-  size?: number;
-}
 
 export const Avatar: React.FC<AvatarProps> = ({
-  name,
+  name, 
   imageUrl,
   size = 48,
 }) => {

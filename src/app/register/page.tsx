@@ -1,3 +1,10 @@
+/**
+ * PÁGINA DE DEMOSTRACIÓN - SIN FUNCIONALIDAD REAL
+ * Esta página muestra un formulario de registro con validación básica,
+ * pero NO implementa registro real ni hace llamadas a una API.
+ * Los datos solo se imprimen en la consola del navegador.
+
+
 'use client';
 
 import { useState } from 'react';
@@ -103,4 +110,4 @@ export default function RegisterPage() {
       </form>
     </main>
   );
-}
+} **/

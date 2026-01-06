@@ -1,0 +1,278 @@
+/* Directivas de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS personalizadas */
+:root {
+  --color-primary: #4f46e5;
+  --color-secondary: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-success: #22c55e;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+/* Reset y estilos base */
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  }
+  
+  h1 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+  
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+  
+  h3 {
+    @apply text-xl font-semibold;
+  }
+  
+  h4 {
+    @apply text-lg font-semibold;
+  }
+  
+  h5 {
+    @apply text-base font-semibold;
+  }
+  
+  h6 {
+    @apply text-sm font-semibold;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+  
+  a {
+    @apply text-blue-600 hover:text-blue-700 transition-colors;
+  }
+  
+  button {
+    @apply cursor-pointer transition-all duration-200;
+  }
+  
+  input,
+  textarea,
+  select {
+    @apply transition-all duration-200;
+  }
+}
+
+/* Componentes personalizados */
+@layer components {
+  /* Card base */
+  .card {
+    @apply bg-white rounded-lg shadow-md p-4 border border-gray-200;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  /* Buttons */
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
+  }
+  
+  .btn-primary {
+    @apply btn bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
+  }
+  
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+  
+  .btn-success {
+    @apply btn bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+  }
+  
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-success {
+    @apply badge bg-green-100 text-green-800;
+  }
+  
+  .badge-danger {
+    @apply badge bg-red-100 text-red-800;
+  }
+  
+  .badge-warning {
+    @apply badge bg-yellow-100 text-yellow-800;
+  }
+  
+  .badge-info {
+    @apply badge bg-blue-100 text-blue-800;
+  }
+  
+  .badge-gray {
+    @apply badge bg-gray-100 text-gray-800;
+  }
+  
+  /* Input fields */
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+  
+  .input-error {
+    @apply input border-red-500 focus:ring-red-500;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    @apply inline-block w-8 h-8 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin;
+  }
+  
+  /* Alert messages */
+  .alert {
+    @apply p-4 rounded-md border;
+  }
+  
+  .alert-success {
+    @apply alert bg-green-50 border-green-200 text-green-800;
+  }
+  
+  .alert-danger {
+    @apply alert bg-red-50 border-red-200 text-red-800;
+  }
+  
+  .alert-warning {
+    @apply alert bg-yellow-50 border-yellow-200 text-yellow-800;
+  }
+  
+  .alert-info {
+    @apply alert bg-blue-50 border-blue-200 text-blue-800;
+  }
+}
+
+/* Utilidades personalizadas */
+@layer utilities {
+  /* Animaciones personalizadas */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scrollbar personalizado */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded hover:bg-gray-500;
+  }
+  
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Gradient backgrounds */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .bg-gradient-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+  
+  .bg-gradient-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  }
+}
+
+/* Estilos para componentes específicos de Rick and Morty */
+.character-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
+
+.stats-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+/* Modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #6366f1;
+  }
+  
+  /* Descomentar si quieres soporte para modo oscuro */
+  /* body {
+    @apply bg-gray-900 text-gray-100;
+  }
+  
+  .card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .input {
+    @apply bg-gray-800 border-gray-700 text-gray-100;
+  } */
+}
+
+/* Impresión */
+@media print {
+  body {
+    @apply text-black bg-white;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}

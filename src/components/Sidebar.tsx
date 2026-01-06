@@ -1,15 +1,6 @@
+import { SidebarProps } from '@/types/components';
 import React from "react";
 
-interface SidebarItem {
-  label: string;
-  icon?: React.ReactNode;
-  active?: boolean;
-}
-
-interface SidebarProps {
-  title?: string;
-  items: SidebarItem[];
-}
 
 export const Sidebar: React.FC<SidebarProps> = ({
   title = "Dashboard",

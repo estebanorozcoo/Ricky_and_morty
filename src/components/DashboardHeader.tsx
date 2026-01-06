@@ -1,7 +1,5 @@
-interface DashboardHeaderProps {
-  title: string;
-  subtitle?: string;
-}
+import { DashboardHeaderProps } from '@/types/components';
+
 
 export default function DashboardHeader({
   title,
