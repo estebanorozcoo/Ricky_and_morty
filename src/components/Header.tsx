@@ -5,12 +5,12 @@ export default function Header() {
     <header className="bg-white shadow-md">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo / Título */}
+          {/* Logo / Título / Logo / Title */}
           <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors">
             Rick & Morty App
           </Link>
 
-          {/* Links de navegación */}
+          {/* Links de navegación / Navigation links */}
           <div className="flex gap-6">
             <Link 
               href="/"
@@ -22,7 +22,7 @@ export default function Header() {
               href="/dashboard"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
-              Dashboard
+              Búsqueda
             </Link>
           </div>
         </div>

@@ -1,9 +1,8 @@
-/* Directivas de Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Variables CSS personalizadas */
+
 :root {
   --color-primary: #4f46e5;
   --color-secondary: #10b981;
@@ -20,7 +19,7 @@
   --radius-lg: 0.75rem;
 }
 
-/* Reset y estilos base */
+
 @layer base {
   * {
     @apply border-gray-200;
@@ -73,9 +72,9 @@
   }
 }
 
-/* Componentes personalizados */
+
 @layer components {
-  /* Card base */
+  
   .card {
     @apply bg-white rounded-lg shadow-md p-4 border border-gray-200;
   }
@@ -84,7 +83,7 @@
     @apply card hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
   }
   
-  /* Buttons */
+  
   .btn {
     @apply px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
   }
@@ -105,7 +104,7 @@
     @apply btn bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
   }
   
-  /* Badges */
+  
   .badge {
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
   }
@@ -130,7 +129,7 @@
     @apply badge bg-gray-100 text-gray-800;
   }
   
-  /* Input fields */
+  
   .input {
     @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
   }
@@ -139,17 +138,17 @@
     @apply input border-red-500 focus:ring-red-500;
   }
   
-  /* Container */
+
   .container-custom {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  /* Loading spinner */
+  
   .spinner {
     @apply inline-block w-8 h-8 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin;
   }
   
-  /* Alert messages */
+  
   .alert {
     @apply p-4 rounded-md border;
   }
@@ -171,9 +170,9 @@
   }
 }
 
-/* Utilidades personalizadas */
+
 @layer utilities {
-  /* Animaciones personalizadas */
+  
   .animate-fade-in {
     animation: fadeIn 0.3s ease-in;
   }
@@ -204,7 +203,7 @@
     }
   }
   
-  /* Scrollbar personalizado */
+  
   .scrollbar-thin::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -218,12 +217,12 @@
     @apply bg-gray-400 rounded hover:bg-gray-500;
   }
   
-  /* Text utilities */
+ 
   .text-balance {
     text-wrap: balance;
   }
   
-  /* Gradient backgrounds */
+  
   .bg-gradient-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
@@ -237,7 +236,7 @@
   }
 }
 
-/* Estilos para componentes específicos de Rick and Morty */
+
 .character-grid {
   @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
 }
@@ -246,7 +245,6 @@
   @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
 }
 
-/* Modo oscuro (opcional) */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #6366f1;
@@ -266,7 +264,7 @@
   } */
 }
 
-/* Impresión */
+
 @media print {
   body {
     @apply text-black bg-white;

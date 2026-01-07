@@ -14,9 +14,9 @@ export default function StatsCard({
   };
 
   return (
-    <div className="card text-center p-3 shadow-sm">
-      <h6>{title}</h6>
-      <p className={`fw-bold ${colorMap[variant]}`}>
+    <div className="bg-white rounded-lg border border-gray-200 text-center p-3 shadow-sm">
+      <h6 className="text-sm font-semibold text-gray-700 mb-2">{title}</h6>
+      <p className={`text-2xl font-bold ${colorMap[variant]}`}>
         {value}
       </p>
     </div>

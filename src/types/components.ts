@@ -1,13 +1,13 @@
 import React from "react";
 
-// Avatar Component Props
+// Avatar Component Props / Props del componente Avatar
 export interface AvatarProps {
   name: string;
   imageUrl?: string;
   size?: number;
 }
 
-// Card Component Props
+// Card Component Props / Props del componente Card
 export interface CardProps {
   title: string;
   description?: string;
@@ -17,13 +17,13 @@ export interface CardProps {
 
 
 
-// DashboardHeader Component Props
+// DashboardHeader Component Props / Props del componente DashboardHeader
 export interface DashboardHeaderProps {
   title: string;
   subtitle?: string;
 }
 
-// FiltersPanel Component Props
+// FiltersPanel Component Props / Props del componente FiltersPanel
 export interface FiltersPanelProps {
   search: string;
   status: string;
@@ -33,7 +33,7 @@ export interface FiltersPanelProps {
   onSpeciesChange: (value: string) => void;
 }
 
-// Sidebar Component Props
+// Sidebar Component Props / Props del componente Sidebar
 export interface SidebarItem {
   label: string;
   icon?: React.ReactNode;
@@ -45,7 +45,7 @@ export interface SidebarProps {
   items: SidebarItem[];
 }
 
-// StatsCard Component Props
+// StatsCard Component Props / Props del componente StatsCard
 export interface StatsCardProps {
   title: string;
   value: number;

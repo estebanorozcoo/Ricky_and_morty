@@ -27,8 +27,11 @@ export default function Home() {
         setLoading(false)
       })
       .catch(err => {
-        setError(err.message || 'Error al cargar los personajes')
-        setLoading(false)
+        const errorMessage = err instanceof Error 
+          ? err.message 
+          : 'Error al cargar los personajes / Error loading characters';
+        setError(errorMessage);
+        setLoading(false);
       })
   }, [currentPage])
 
@@ -74,7 +77,7 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Controles de paginación */}
+      {/* Controles de paginación / Pagination controls */}
       <div className="flex items-center justify-center gap-4 mt-8">
         <button
           onClick={handlePrevPage}

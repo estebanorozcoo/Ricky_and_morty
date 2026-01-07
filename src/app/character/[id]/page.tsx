@@ -1,7 +1,6 @@
-// src/app/character/[id]/page.tsx
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image'; // ← Importar Image de Next.js
+import Image from 'next/image'; 
 import { getCharacterById } from '@/services/api';
 import { Character } from '@/types/character';
 
@@ -23,7 +22,6 @@ export default async function CharacterDetailPage({
     notFound();
   }
 
-  // Función para determinar el color del badge de estado
   const getStatusColor = (status: Character['status']) => {
     switch (status) {
       case 'Alive':
@@ -40,7 +38,7 @@ export default async function CharacterDetailPage({
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4 max-w-4xl">
-        {/* Botón volver atrás */}
+        {/* Botón volver atrás / Back button */}
         <Link 
           href="/"
           className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold mb-6 transition-colors"
@@ -57,32 +55,32 @@ export default async function CharacterDetailPage({
               clipRule="evenodd" 
             />
           </svg>
-          Volver atrás
+          Volver atrás 
         </Link>
 
-        {/* Card principal del personaje */}
+        {/* Card principal del personaje / Main character card */}
         <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-          {/* Header con imagen y nombre */}
+          {/* Header con imagen y nombre / Header with image and name */}
           <div className="md:flex">
-            {/* Imagen del personaje */}
-            <div className="md:w-1/3 relative h-80 md:h-auto"> {/* ← Altura definida */}
+            {/* Imagen del personaje / Character image */}
+            <div className="md:w-1/3 relative h-80 md:h-auto"> 
               <Image
                 src={character.image}
                 alt={character.name}
-                fill // ← Usar fill para que ocupe todo el contenedor
+                fill 
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 33vw"
-                priority // ← Cargar imagen con prioridad
+                priority 
               />
             </div>
 
-            {/* Información principal */}
+            {/* Información principal / Main information */}
             <div className="p-6 md:w-2/3">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 {character.name}
               </h1>
 
-              {/* Badge de estado */}
+              {/* Badge de estado / Status badge */}
               <span
                 className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 ${getStatusColor(
                   character.status
@@ -91,33 +89,33 @@ export default async function CharacterDetailPage({
                 {character.status}
               </span>
 
-              {/* Grid de información */}
+              {/* Grid de información / Information grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Especie */}
+                {/* Especie / Species */}
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">
-                    Especie
+                    Especie 
                   </p>
                   <p className="text-lg font-semibold text-gray-900">
                     {character.species}
                   </p>
                 </div>
 
-                {/* Género */}
+                {/* Género / Gender */}
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">
-                    Género
+                    Género 
                   </p>
                   <p className="text-lg font-semibold text-gray-900">
                     {character.gender}
                   </p>
                 </div>
 
-                {/* Tipo */}
+                {/* Tipo / Type */}
                 {character.type && (
                   <div>
                     <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">
-                      Tipo
+                      Tipo 
                     </p>
                     <p className="text-lg font-semibold text-gray-900">
                       {character.type}
@@ -125,38 +123,38 @@ export default async function CharacterDetailPage({
                   </div>
                 )}
 
-                {/* Origen */}
+                {/* Origen / Origin */}
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">
-                    Origen
+                    Origen 
                   </p>
                   <p className="text-lg font-semibold text-gray-900">
                     {character.origin.name}
                   </p>
                 </div>
 
-                {/* Ubicación */}
+                {/* Ubicación / Location */}
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">
-                    Última ubicación conocida
+                    Última ubicación conocida 
                   </p>
                   <p className="text-lg font-semibold text-gray-900">
                     {character.location.name}
                   </p>
                 </div>
 
-                {/* Número de episodios */}
+                {/* Número de episodios / Episode count */}
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">
-                    Episodios
+                    Episodios 
                   </p>
                   <p className="text-lg font-semibold text-gray-900">
-                    {character.episode.length} episodios
+                    {character.episode.length} episodios 
                   </p>
                 </div>
               </div>
 
-              {/* Fecha de creación */}
+              {/* Fecha de creación / Creation date */}
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <p className="text-sm text-gray-500">
                   Creado el: {new Date(character.created).toLocaleDateString('es-ES', {

@@ -3,10 +3,10 @@ import { ApiResponse, Character } from '../types/character';
 const BASE_URL = 'https://rickandmortyapi.com/api';
 
 /**
- * Obtiene la lista de personajes desde la API de Rick and Morty
- * @param page - Número de página a obtener (opcional, por defecto 1)
- * @returns Promise con la respuesta de la API incluyendo info de paginación y personajes
- * @throws Error si la petición falla
+ * 
+ * @param page 
+ * @returns 
+ * @throws 
  */
 export async function getCharacters(page?: number): Promise<ApiResponse> {
   try {
@@ -14,6 +14,7 @@ export async function getCharacters(page?: number): Promise<ApiResponse> {
     const response = await fetch(url);
     
     if (!response.ok) {
+      // Error HTTP / HTTP Error
       throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);
     }
     
@@ -28,10 +29,10 @@ export async function getCharacters(page?: number): Promise<ApiResponse> {
 }
 
 /**
- * Obtiene un personaje específico por su ID
- * @param id - ID del personaje a obtener
- * @returns Promise con los datos del personaje
- * @throws Error si la petición falla o el personaje no existe
+ * 
+ * @param id 
+ * @returns 
+ * @throws 
  */
 export async function getCharacterById(id: number): Promise<Character> {
   try {
