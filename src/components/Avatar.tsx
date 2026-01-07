@@ -1,4 +1,4 @@
-import { AvatarProps } from '@/types/components';
+/* import { AvatarProps } from '@/types/components';
 import React from "react";
 
 
@@ -48,3 +48,4 @@ export const Avatar: React.FC<AvatarProps> = ({
     </div>
   );
 };
+ */

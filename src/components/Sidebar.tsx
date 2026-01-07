@@ -1,4 +1,4 @@
-import { SidebarProps } from '@/types/components';
+/* import { SidebarProps } from '@/types/components';
 import React from "react";
 
 
@@ -61,4 +61,4 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </nav>
     </aside>
   );
-};
+}; */

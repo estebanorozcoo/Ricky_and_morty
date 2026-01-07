@@ -1,4 +1,4 @@
-import { CardProps } from '@/types/components';
+/* import { CardProps } from '@/types/components';
 import React from "react";
 
 export const Card: React.FC<CardProps> = ({
@@ -31,4 +31,4 @@ export const Card: React.FC<CardProps> = ({
       </div>
     </div>
   );
-};
+}; */
